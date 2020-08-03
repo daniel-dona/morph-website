@@ -1,9 +1,22 @@
-language:      node_js
+language: node_js
+    
+ 
+services:
+  - docker
+        
 git:
   depth:       3
 node_js:
   - "node"
-install:       npm install
+
+install:
+- npm install @rmlio/yarrrml-parser
+
+before_script:
+- cd obda/
+- npx yarrrml-parser mapping.yaml mapping.ttl 
+
+
 script:
   - npm test
   - gulp
