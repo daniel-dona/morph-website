@@ -11,7 +11,7 @@ prefixes:
 mappings:
   person:
     sources:
-      - [/data/files/person.csv~csv]
+      - [files/person.csv~csv]
     s: oeg:person/$(id)
     po:
     - [a, schema:Person]
@@ -37,7 +37,7 @@ mappings:
 
   paper:
     sources:
-      - [/data/files/paper.csv~csv]
+      - [files/paper.csv~csv]
     s: oeg:paper/$(id)
     po:
     - [a, schema:ScholarlyArticle]
@@ -74,7 +74,7 @@ mappings:
               - [str2, $(paper_id)]              
   tool:
     sources:
-      - [/data/files/tool.csv~csv]
+      - [files/tool.csv~csv]
     s: oeg:Tool/$(id)
     po:
     - [a, schema:SoftwareSourceCode]
@@ -114,7 +114,7 @@ mappings:
 
   award:  #TODO: I would remove all structured references to Awards, since they do not exist in schema.org and are just a text, and this is how they are presented in the website. Create a text from this CSV.
     sources:
-      - [/data/files/award.csv~csv]
+      - [files/award.csv~csv]
     s: oeg:Award/$(id)
     po:
     - [a, schema:award]
@@ -152,7 +152,7 @@ mappings:
                                 
   papers_people:
     sources:
-      - [/data/files/papers_people.csv~csv]
+      - [files/papers_people.csv~csv]
     s: oeg:Paper_person/$(paper_id)_$(person_id)
     po:
     - [a, schema:isRelatedTo]
@@ -176,7 +176,7 @@ mappings:
 
   papers_awards:
     sources:
-      - [/data/files/papers_awards.csv~csv]
+      - [files/papers_awards.csv~csv]
     s: oeg:Paper_award/$(paper_id)_$(award_id)
     po:
     - [a, schema:isRelatedTo]
@@ -199,7 +199,7 @@ mappings:
 
   papers_tools:
     sources:
-      - [/data/files/papers_tools.csv~csv]
+      - [files/papers_tools.csv~csv]
     s: oeg:Paper_tool/$(paper_id)_$(tool_id)
     po:
     - [a, schema:isRelatedTo]
@@ -222,7 +222,7 @@ mappings:
 
   awards_tools:
     sources:
-      - [/data/files/awards_tools.csv~csv]
+      - [files/awards_tools.csv~csv]
     s: oeg:Award_tool/$(award_id)_$(tool_id)
     po:
     - [a, schema:isRelatedTo]
@@ -245,7 +245,7 @@ mappings:
 
   people_tools:
     sources:
-      - [/data/files/people_tools.csv~csv]
+      - [files/people_tools.csv~csv]
     s: oeg:Person_tool/$(person_id)_$(tool_id)
     po:
     - [a, schema:isRelatedTo]
@@ -268,7 +268,7 @@ mappings:
   
   people_awards:
     sources:
-      - [/data/files/people_awards.csv~csv]
+      - [files/people_awards.csv~csv]
     s: oeg:Person_award/$(person_id)_$(award_id)
     po:
     - [a, schema:isRelatedTo]

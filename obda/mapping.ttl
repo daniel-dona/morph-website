@@ -18,7 +18,7 @@
 
 :map_person_0 rml:logicalSource :source_0.
 :source_0 a rml:LogicalSource;
-    rml:source "/data/files/person.csv";
+    rml:source "files/person.csv";
     rml:referenceFormulation ql:CSV.
 :map_person_0 a rr:TriplesMap;
     rdfs:label "person".
@@ -207,7 +207,7 @@
     rr:datatype <http://www.w3.org/2001/XMLSchema#string>.
 :map_paper_0 rml:logicalSource :source_1.
 :source_1 a rml:LogicalSource;
-    rml:source "/data/files/paper.csv";
+    rml:source "files/paper.csv";
     rml:referenceFormulation ql:CSV.
 :map_paper_0 a rr:TriplesMap;
     rdfs:label "paper".
@@ -311,7 +311,7 @@
 :pom_29 rr:objectMap :om_29.
 :map_tool_0 rml:logicalSource :source_2.
 :source_2 a rml:LogicalSource;
-    rml:source "/data/files/tool.csv";
+    rml:source "files/tool.csv";
     rml:referenceFormulation ql:CSV.
 :map_tool_0 a rr:TriplesMap;
     rdfs:label "tool".
@@ -434,7 +434,7 @@
 :pom_42 rr:objectMap :om_42.
 :map_award_0 rml:logicalSource :source_3.
 :source_3 a rml:LogicalSource;
-    rml:source "/data/files/award.csv";
+    rml:source "files/award.csv";
     rml:referenceFormulation ql:CSV.
 :map_award_0 a rr:TriplesMap;
     rdfs:label "award".
@@ -538,7 +538,7 @@
 :pom_53 rr:objectMap :om_53.
 :map_papers_people_0 rml:logicalSource :source_4.
 :source_4 a rml:LogicalSource;
-    rml:source "/data/files/papers_people.csv";
+    rml:source "files/papers_people.csv";
     rml:referenceFormulation ql:CSV.
 :map_papers_people_0 a rr:TriplesMap;
     rdfs:label "papers_people".
@@ -578,7 +578,7 @@
 :pom_57 rr:objectMap :om_57.
 :map_papers_awards_0 rml:logicalSource :source_5.
 :source_5 a rml:LogicalSource;
-    rml:source "/data/files/papers_awards.csv";
+    rml:source "files/papers_awards.csv";
     rml:referenceFormulation ql:CSV.
 :map_papers_awards_0 a rr:TriplesMap;
     rdfs:label "papers_awards".
@@ -608,7 +608,7 @@
 :pom_60 rr:objectMap :om_60.
 :map_papers_tools_0 rml:logicalSource :source_6.
 :source_6 a rml:LogicalSource;
-    rml:source "/data/files/papers_tools.csv";
+    rml:source "files/papers_tools.csv";
     rml:referenceFormulation ql:CSV.
 :map_papers_tools_0 a rr:TriplesMap;
     rdfs:label "papers_tools".
@@ -638,7 +638,7 @@
 :pom_63 rr:objectMap :om_63.
 :map_awards_tools_0 rml:logicalSource :source_7.
 :source_7 a rml:LogicalSource;
-    rml:source "/data/files/awards_tools.csv";
+    rml:source "files/awards_tools.csv";
     rml:referenceFormulation ql:CSV.
 :map_awards_tools_0 a rr:TriplesMap;
     rdfs:label "awards_tools".
@@ -668,7 +668,7 @@
 :pom_66 rr:objectMap :om_66.
 :map_people_tools_0 rml:logicalSource :source_8.
 :source_8 a rml:LogicalSource;
-    rml:source "/data/files/people_tools.csv";
+    rml:source "files/people_tools.csv";
     rml:referenceFormulation ql:CSV.
 :map_people_tools_0 a rr:TriplesMap;
     rdfs:label "people_tools".
@@ -698,7 +698,7 @@
 :pom_69 rr:objectMap :om_69.
 :map_people_awards_0 rml:logicalSource :source_9.
 :source_9 a rml:LogicalSource;
-    rml:source "/data/files/people_awards.csv";
+    rml:source "files/people_awards.csv";
     rml:referenceFormulation ql:CSV.
 :map_people_awards_0 a rr:TriplesMap;
     rdfs:label "people_awards".
