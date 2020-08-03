@@ -17,6 +17,18 @@ jobs:
       - cd obda/
       
       script: npx yarrrml-parser -i mapping.yaml -o mapping.ttl
+      
+      deploy:
+        provider: pages
+          skip-cleanup: true
+          target-branch: master # Commit to master instead of gh-pages
+          github-token: 
+            - secure: "j9IPTMHrKwBRIu01MrTxv087hVWqE+bLkK8yw9lwsnFPSWv6radqzltmbY4sMfyOZBD631d2nujpmEUAwErWXWzCndVeoEyxwayfwOtb4qucrTVk/D9JrteFym1epJNTGSgyUpBOERhW33YvBXmq0A9gMhi0vJlH3DY7btAd27bK//RLrwGPAezEQORDvP/mdmoPGJ6xsC5U9TkeO5tZ/8JgramFlsFmsrcgG3X7AKFU0IUZ3DC1tPMqLFTXAXmPH8AcL5mrWbwTAqktwCM9McxAThRI3/S0Y+tTl2z3zpGxP9JNXP5FBvolrz8xojgRS3u5Wrh5yRZvpb5orXWQD64+lEg+wHqqAL+DEiimY4pXuQlET/bw8tpg+bl8EqN+sDLxr3uMQdPpzuQt0U3mvJYFjEVN3L7C/CxoeQVxVxxEMhUGw78/OK5iKvMsTYg5t+j+I7LGxCakcKE7ZLyYRGft4eVJe1lU0sf1sozsP8M7ds84ha82f6Xsb/b/aoNwexyIQnbuqe7lfF3Pwfh6Xa8jgR3zrekQsVK0puOCiRJqccPM3Me9RtdmatCj78wcTYIq6vt+w0qA9biPh5ymchBhb2S8UJlDofrPPXfjOiycyOUTy/JKQ2ejQHiF1Q4Ba9Rdb8pn9NDnrEDqUu1hNpizVluI0EciO+hopsI5Yec="
+          keep-history: true # By default, Travis uses push --force and wipes out commit history
+          verbose: true
+          on:
+        branch: master
+      
 
     - stage: Whatever
-      script: echo "ASDF"
+      script: cat obda/mapping.ttl
