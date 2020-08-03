@@ -1,24 +1,22 @@
-jobs:
-
-  language: generic
+language: generic
       
    
-  services:
-    - docker
+services:
+  - docker
           
-  git:
-    depth:       3
-  node_js:
-    - "node"
+git:
+  depth: 3
 
-  install:
-  - npm install @rmlio/yarrrml-parser
 
-  before_script:
-  - cd obda/
-  - npx yarrrml-parser -i mapping.yaml -o mapping.ttl
+jobs:
+  include:
+    - stage: Prepare mapping
+      
+      install:
+      - npm install @rmlio/yarrrml-parser
+      - cd obda/
+      
+      script: npx yarrrml-parser -i mapping.yaml -o mapping.ttl
 
-  script: true
-
-  notifications:
-    email:       false
+    - stage: Whatever
+      script: echo "ASDF"
