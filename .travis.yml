@@ -1,27 +1,24 @@
-language: node_js
-    
- 
-services:
-  - docker
-        
-git:
-  depth:       3
-node_js:
-  - "node"
+jobs:
 
-install:
-- npm install @rmlio/yarrrml-parser
+  language: generic
+      
+   
+  services:
+    - docker
+          
+  git:
+    depth:       3
+  node_js:
+    - "node"
 
-before_script:
-- cd obda/
-- npx yarrrml-parser mapping.yaml mapping.ttl 
+  install:
+  - npm install @rmlio/yarrrml-parser
 
+  before_script:
+  - cd obda/
+  - npx yarrrml-parser -i mapping.yaml -o mapping.ttl
 
-script:
-  - npm test
-  - gulp
-cache:
-  directories:
-    - node_modules
-notifications:
-  email:       false
+  script: true
+
+  notifications:
+    email:       false
