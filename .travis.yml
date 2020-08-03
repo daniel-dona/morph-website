@@ -1,5 +1,5 @@
 language: generic
-      
+sudo: required
    
 services:
   - docker
@@ -33,6 +33,8 @@ jobs:
     - stage: Run SDM-RDFizer
     
       install:
+        - sudo apt update
+        - sudo apt install python3-pip
         - python3 -m pip install -U pip
         - python3 -m pip install rdfizer
         - cd obda/
