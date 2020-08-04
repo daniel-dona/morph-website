@@ -87,6 +87,7 @@ mappings:
     - [schema:image, $(image_link)~iri]
     - [schema:datePublished, $(date_published), xsd:date]
     - [schema:url, $(webpage)~iri]
+    - [ex:demo, $(demo), xsd:boolean]
     - p: schema:author
       o:
         - mapping: people_tools
